@@ -1,0 +1,4 @@
+-keep class cn.jpush.** { *; }
+-keep class cn.jiguang.** { *; }
+-dontwarn cn.jpush.**
+-dontwarn cn.jiguang.**

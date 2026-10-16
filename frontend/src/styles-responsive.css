@@ -1,0 +1,326 @@
+/* Loaded after base styles so layout changes apply at every breakpoint. */
+@media (min-width: 1600px) {
+  .app-shell .news-card {
+    padding: 25px;
+  }
+  .app-shell .card-summary {
+    font-size: 13px;
+  }
+  .app-shell .news-card h3 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1250px) {
+  .app-shell .sidebar {
+    width: 210px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .app-shell .main-shell {
+    margin-left: 210px;
+  }
+  .app-shell main {
+    padding: 28px 28px 0;
+  }
+  .app-shell .topbar {
+    padding: 0 28px;
+  }
+  .app-shell .news-grid,
+  .app-shell .source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-shell .stats > div {
+    padding: 0 18px;
+  }
+  .app-shell .stats small {
+    display: block;
+    margin: 6px 0 0;
+  }
+}
+@media (max-width: 960px) {
+  .app-shell {
+    display: block;
+  }
+  .app-shell .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 15px 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 0;
+    border-bottom: 1px solid #e5eaf0;
+  }
+  .app-shell .brand {
+    margin: 0;
+  }
+  .app-shell .brand small {
+    font-size: 9px;
+  }
+  .app-shell .sidebar nav {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .app-shell .sidebar nav a {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .app-shell .sidebar nav a svg {
+    width: 16px;
+  }
+  .app-shell .nav-label,
+  .app-shell .sidebar-note,
+  .app-shell .sidebar-footer {
+    display: none;
+  }
+  .app-shell .main-shell {
+    margin: 0;
+  }
+  .app-shell .topbar {
+    height: 62px;
+  }
+  .app-shell main {
+    padding: 28px 26px 0;
+  }
+  .app-shell .detail-article {
+    padding: 28px;
+  }
+  .app-shell .page-heading h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .app-shell .sidebar {
+    padding: 14px 17px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .app-shell .brand-mark {
+    width: 34px;
+    height: 34px;
+    font-size: 25px;
+    border-radius: 8px;
+  }
+  .app-shell .brand strong {
+    font-size: 12px;
+  }
+  .app-shell .brand small {
+    font-size: 8px;
+  }
+  .app-shell .sidebar nav {
+    gap: 2px;
+  }
+  .app-shell .sidebar nav a {
+    font-size: 11px;
+    gap: 5px;
+    padding: 8px;
+  }
+  .app-shell .sidebar nav a svg {
+    display: none;
+  }
+  .app-shell .topbar {
+    padding: 0 18px;
+    height: 58px;
+  }
+  .app-shell .topbar-label {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .app-shell .topbar-label span {
+    margin: 0 6px;
+  }
+  .app-shell .topbar-actions {
+    gap: 12px;
+  }
+  .app-shell .service-status {
+    font-size: 0;
+    gap: 0;
+  }
+  .app-shell .primary-button {
+    padding: 8px 11px;
+    font-size: 11px;
+    min-height: 34px;
+  }
+  .app-shell main {
+    padding: 24px 18px 0;
+  }
+  .app-shell .page-heading {
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 21px;
+  }
+  .app-shell .page-heading h1 {
+    font-size: 25px;
+  }
+  .app-shell .page-heading p {
+    font-size: 12px;
+  }
+  .app-shell .date-picker {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+  .app-shell .date-picker input {
+    padding: 7px 9px;
+  }
+  .app-shell .briefing-banner {
+    padding: 25px 21px;
+  }
+  .app-shell .briefing-banner h2 {
+    font-size: 21px;
+  }
+  .app-shell .briefing-banner p {
+    font-size: 10px;
+    line-height: 1.8;
+    max-width: 205px;
+  }
+  .app-shell .banner-tag {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .app-shell .banner-date strong {
+    font-size: 25px;
+  }
+  .app-shell .banner-date span {
+    font-size: 8px;
+  }
+  .app-shell .stats {
+    padding: 18px 0;
+    margin-top: 14px;
+  }
+  .app-shell .stats > div {
+    padding: 0 12px;
+  }
+  .app-shell .stats > div > span {
+    font-size: 9px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .app-shell .stats strong {
+    font-size: 21px;
+  }
+  .app-shell .stats small {
+    font-size: 9px;
+  }
+  .app-shell .report-meta {
+    align-items: flex-start;
+    font-size: 9px;
+    line-height: 1.8;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .app-shell .notice {
+    font-size: 11px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .app-shell .filter-panel {
+    margin-top: 24px;
+    gap: 22px;
+  }
+  .app-shell .segment {
+    width: 100%;
+  }
+  .app-shell .segment button {
+    flex: 1;
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+  .app-shell .topic-tabs {
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+  }
+  .app-shell .topic-tabs button {
+    font-size: 11px;
+  }
+  .app-shell .news-grid,
+  .app-shell .source-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .news-card {
+    padding: 21px;
+  }
+  .app-shell .news-card h3 {
+    font-size: 16px;
+  }
+  .app-shell .card-summary {
+    font-size: 13px;
+  }
+  .app-shell .section-heading h2 {
+    font-size: 19px;
+  }
+  .app-shell .section-heading > span {
+    font-size: 8px;
+  }
+  .app-shell .section-heading {
+    margin-top: 25px;
+  }
+  .app-shell .history-card {
+    padding: 18px 15px;
+    gap: 15px;
+  }
+  .app-shell .history-date {
+    padding-right: 14px;
+    min-width: 53px;
+  }
+  .app-shell .history-card h2 {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .app-shell .history-card p {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .app-shell .history-card > svg {
+    display: none;
+  }
+  .app-shell .detail-article {
+    padding: 24px 20px;
+  }
+  .app-shell .detail-article h1 {
+    font-size: 23px;
+  }
+  .app-shell .detail-meta {
+    gap: 12px;
+  }
+  .app-shell .detail-source {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .app-shell .detail-article .summary-box {
+    padding: 21px;
+  }
+  .app-shell .impact-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .page-footer {
+    font-size: 9px;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 35px;
+  }
+  .app-shell .token-form {
+    flex-wrap: wrap;
+  }
+  .app-shell .empty {
+    padding: 42px 18px;
+  }
+  .app-shell .empty h2 {
+    font-size: 18px;
+  }
+  .app-shell .empty p {
+    font-size: 12px;
+  }
+  .app-shell .loading {
+    padding: 40px 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

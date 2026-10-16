@@ -1,0 +1,26 @@
+.env
+.venv/
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.tsbuildinfo
+database/data/
+*.db
+*.db-shm
+*.db-wal
+.coverage
+output/
+
+# Android credentials, generated artifacts and local toolchains
+mobile/config.json
+mobile/android/key.properties
+mobile/android/local.properties
+*.jks
+*.keystore
+mobile/.dart_tool/
+mobile/build/
+mobile/.flutter-plugins-dependencies
+mobile/android/.gradle/
+.ruff_cache/

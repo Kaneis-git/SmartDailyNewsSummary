@@ -1,0 +1,60 @@
+name: ai-daily-news
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  environment: &environment
+    DATA_DIR: /data
+    SOURCES_FILE: /app/backend/sources.json
+    TIMEZONE: Asia/Shanghai
+    REPORT_HOUR: ${REPORT_HOUR:-8}
+    REPORT_MINUTE: ${REPORT_MINUTE:-0}
+    AI_BASE_URL: ${AI_BASE_URL:-}
+    AI_API_KEY: ${AI_API_KEY:-}
+    AI_MODEL: ${AI_MODEL:-}
+    AI_TIMEOUT: ${AI_TIMEOUT:-35}
+    FEED_TIMEOUT: ${FEED_TIMEOUT:-15}
+    MAX_PER_SECTION: ${MAX_PER_SECTION:-3}
+    CANDIDATE_MULTIPLIER: ${CANDIDATE_MULTIPLIER:-2}
+    ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+    ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+    ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost,127.0.0.1,api,testserver}
+    COOKIE_SECURE: ${COOKIE_SECURE:-false}
+    SESSION_DAYS: ${SESSION_DAYS:-30}
+    ALLOW_REGISTRATION: ${ALLOW_REGISTRATION:-true}
+    AUTH_RATE_LIMIT: ${AUTH_RATE_LIMIT:-12}
+    PUSH_PROVIDER: ${PUSH_PROVIDER:-disabled}
+    JPUSH_APP_KEY: ${JPUSH_APP_KEY:-}
+    JPUSH_MASTER_SECRET: ${JPUSH_MASTER_SECRET:-}
+    PUSH_TIMEOUT: ${PUSH_TIMEOUT:-10}
+  volumes:
+    - news_data:/data
+    - ./backend/sources.json:/app/backend/sources.json:ro
+  restart: unless-stopped
+services:
+  api:
+    <<: *backend
+    ports:
+      - "127.0.0.1:8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+  worker:
+    <<: *backend
+    command: ["python", "manage.py", "worker"]
+    depends_on:
+      api:
+        condition: service_healthy
+  frontend:
+    build: ./frontend
+    ports:
+      - "${WEB_BIND_ADDRESS:-127.0.0.1}:3000:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  news_data:

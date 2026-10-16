@@ -1,0 +1,74 @@
+[
+  {
+    "id": "cns-china",
+    "name": "中国新闻网 · 时政",
+    "feed_url": "https://www.chinanews.com.cn/rss/china.xml",
+    "region_hint": "china",
+    "category_hint": "politics",
+    "enabled": true
+  },
+  {
+    "id": "cns-finance",
+    "name": "中国新闻网 · 财经",
+    "feed_url": "https://www.chinanews.com.cn/rss/finance.xml",
+    "region_hint": "china",
+    "category_hint": "finance",
+    "enabled": true
+  },
+  {
+    "id": "cns-latest",
+    "name": "中国新闻网 · 综合补充",
+    "feed_url": "https://www.chinanews.com.cn/rss/scroll-news.xml",
+    "region_hint": "china",
+    "category_hint": "mixed",
+    "enabled": true
+  },
+  {
+    "id": "bbc-world",
+    "name": "BBC · World",
+    "feed_url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "region_hint": "international",
+    "category_hint": "politics",
+    "enabled": true
+  },
+  {
+    "id": "bbc-business",
+    "name": "BBC · Business",
+    "feed_url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+    "region_hint": "international",
+    "category_hint": "finance",
+    "enabled": true
+  },
+  {
+    "id": "bbc-tech",
+    "name": "BBC · Technology",
+    "feed_url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "region_hint": "international",
+    "category_hint": "technology",
+    "enabled": true
+  },
+  {
+    "id": "ithome",
+    "name": "IT之家 · 备用科技源",
+    "feed_url": "https://www.ithome.com/rss/",
+    "region_hint": "international",
+    "category_hint": "technology",
+    "enabled": false
+  },
+  {
+    "id": "qbitai",
+    "name": "量子位 · AI",
+    "feed_url": "https://www.qbitai.com/feed",
+    "region_hint": "china",
+    "category_hint": "ai",
+    "enabled": true
+  },
+  {
+    "id": "techcrunch-ai",
+    "name": "TechCrunch · AI",
+    "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "region_hint": "international",
+    "category_hint": "ai",
+    "enabled": true
+  }
+]

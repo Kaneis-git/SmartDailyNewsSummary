@@ -1,0 +1,14 @@
+.git
+.env
+.venv
+**/node_modules
+**/dist
+**/__pycache__
+**/.pytest_cache
+database/data
+*.zip
+
+mobile
+.ruff_cache
+*.jks
+*.keystore
